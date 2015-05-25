@@ -1,0 +1,14 @@
+<section>
+    <div class="row">
+      <div class="col-sm-6 col-md-4" data-ng-repeat="cat in catlist.cats">
+        <div class="thumbnail">
+          <img src={{cat.thumb}} alt={{cat.breed}}>
+          <div class="caption">
+            <h3>{{cat.breed}}</h3>
+            <p>some description</p>
+            <p><a href="#" class="btn btn-primary" role="button">Details</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
