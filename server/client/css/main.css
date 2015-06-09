@@ -1,0 +1,24 @@
+.fluid-container {
+    padding: 2%;
+}
+
+article, pad {
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.info {
+    font-style: italic;
+    color:grey;
+}
+
+.picture-list {
+    position: relative;
+}
+
+.picture-list li {
+    list-style: none;
+    margin: 5px;
+    vertical-align: middle;
+    display: block;
+}

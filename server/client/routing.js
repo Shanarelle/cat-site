@@ -6,7 +6,12 @@
         .when('/', {
             templateUrl : 'templates/homeTemplate.html',
             controller  : 'homeController'
-        }).otherwise( {
+        })
+        .when('/breedPage/:breedName', {
+            templateUrl : 'templates/breedPageTemplate.html',
+            controller  : 'breedController' 
+        })
+        .otherwise( {
             templateUrl : 'templates/homeTemplate.html',
             controller  : 'homeController'
         });

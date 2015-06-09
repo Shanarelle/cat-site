@@ -1,0 +1,43 @@
+<article class="clearfix">
+    <div class="page-header">
+        <h1 class="center-block">{{breed.name}}</h1>
+    </div>
+    <div class="clearfix row">
+        <aside class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">Breed Characteristics</div>
+                <ul class="list-group">
+                    <li class="list-group-item" ng-repeat="char in breed.characteristics">{{char}}</li>
+                </ul>
+            </div>
+        </aside>
+        <section class="pull-right col-md-8">{{breed.description}}</section>
+    </div>
+    <section>
+        <ul class="picture-list">
+            <li class="col-md-2 col-s-3 col-xs-4 thumbnail" ng-repeat="details in relatedBreeds">
+                <a href="{{details.url}}" target="_blank">
+                    <img src="{{details.pic}}" alt="{{details.title}} cat">
+                </a>
+            </li>
+        </ul>
+        <p class="info pull-right">Pictures provided by flickr under a <a href="https://creativecommons.org/licenses/by-nc/2.0/" target="_blank">creative commons license</a></p>
+    </section>
+</article>
+<div class="page-header pad">
+    <h1 class="center-block"><small>Comments</small></h1>
+</div>
+<article class="comments" ng-repeat="comment in commentList">
+    <div class="info">
+        <p>by: {{comment.author}} 
+        <span class="pull-right">on: {{comment.date}}</span></p>
+    </div>
+    <section class="center-block container">
+        <p>{{comment.text}}</p>
+        <ul class="picture-list">
+            <li class="col-md-2 col-s-3 col-xs-4 thumbnail" ng-repeat="picture in comment.pictureList">
+                <img src="{{picture.pic}}" alt="{{picture.name}}">
+            </li>
+        </ul>
+    </section>
+</article>
