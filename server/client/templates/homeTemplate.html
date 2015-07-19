@@ -2,7 +2,7 @@
     <div class="row">
       <div class="col-sm-6 col-md-4" data-ng-repeat="cat in catlist.cats">
         <a class="thumbnail" href="#/breedPage/{{cat.breed}}">
-          <img src={{cat.thumb}} alt={{cat.breed}}>
+          <img ng-src={{cat.thumb}} alt={{cat.breed}}>
           <div class="caption">
             <h3>{{cat.breed}}</h3>
             <p>some description</p>

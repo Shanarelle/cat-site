@@ -17,7 +17,7 @@
         <ul class="picture-list">
             <li class="col-md-2 col-s-3 col-xs-4 thumbnail" ng-repeat="details in relatedBreeds">
                 <a href="{{details.url}}" target="_blank">
-                    <img src="{{details.pic}}" alt="{{details.title}} cat">
+                    <img ng-src="{{details.pic}}" alt="{{details.title}} cat">
                 </a>
             </li>
         </ul>
@@ -26,6 +26,7 @@
 </article>
 <div class="page-header pad">
     <h1 class="center-block"><small>Comments</small></h1>
+    <button class="btn btn-default" ng-click="addComment()">Add a Comment</button>
 </div>
 <article class="comments" ng-repeat="comment in commentList">
     <div class="info">
@@ -36,7 +37,7 @@
         <p>{{comment.text}}</p>
         <ul class="picture-list">
             <li class="col-md-2 col-s-3 col-xs-4 thumbnail" ng-repeat="picture in comment.pictureList">
-                <img src="{{picture.pic}}" alt="{{picture.name}}">
+                <img ng-src="{{picture.pic}}" alt="{{picture.name}}">
             </li>
         </ul>
     </section>

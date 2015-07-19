@@ -55,8 +55,9 @@ module.exports = {
             flickr.photos.search({
                 text: search_term,
                 extras: "url_z",
-                //license: "1",   //creative commons. modifications allowed is 2
-                media: "photos"
+                license: "1",   //creative commons. modifications allowed is 2
+                media: "photos",
+                limit: "50"
             }, function(err, result) {
                 if(err) { console.log("error: " + err); }
                 if (result.photos.photo.length > 0) {
